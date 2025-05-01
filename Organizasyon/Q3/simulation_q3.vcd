@@ -1,0 +1,288 @@
+$date
+	Thu May 01 23:11:13 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_datapath_lui $end
+$var wire 1 ! wr $end
+$var wire 7 " opcode [6:0] $end
+$var wire 1 # funct7_5 $end
+$var wire 3 $ funct3 [2:0] $end
+$var wire 32 % aluResult [31:0] $end
+$var wire 3 & ResultSrc [2:0] $end
+$var wire 1 ' MemWrite $end
+$var wire 1 ( Jump $end
+$var wire 3 ) ImmSrc [2:0] $end
+$var wire 1 * Branch $end
+$var wire 1 + ALUSrc $end
+$var wire 2 , ALUOp [1:0] $end
+$var wire 3 - ALUControl [2:0] $end
+$var reg 1 . clk $end
+$var reg 1 / rst $end
+$scope module CU $end
+$var wire 7 0 opcode [6:0] $end
+$var wire 1 # funct7_5 $end
+$var wire 3 1 funct3 [2:0] $end
+$var reg 3 2 ALUControl [2:0] $end
+$var reg 2 3 ALUOp [1:0] $end
+$var reg 1 + ALUSrc $end
+$var reg 1 * Branch $end
+$var reg 3 4 ImmSrc [2:0] $end
+$var reg 1 ( Jump $end
+$var reg 1 ' MemWrite $end
+$var reg 1 ! RegWrite $end
+$var reg 3 5 ResultSrc [2:0] $end
+$upscope $end
+$scope module DP $end
+$var wire 3 6 ALUControl [2:0] $end
+$var wire 2 7 ALUOp [1:0] $end
+$var wire 1 + ALUSrc $end
+$var wire 1 * Branch $end
+$var wire 3 8 ImmSrc [2:0] $end
+$var wire 1 ( Jump $end
+$var wire 1 ' MemWrite $end
+$var wire 3 9 ResultSrc [2:0] $end
+$var wire 32 : WBData [31:0] $end
+$var wire 1 . clk $end
+$var wire 1 / rst $end
+$var wire 1 ! wr $end
+$var wire 7 ; opcode [6:0] $end
+$var wire 1 # funct7_5 $end
+$var wire 3 < funct3 [2:0] $end
+$var wire 32 = aluResult [31:0] $end
+$var wire 1 > Zero $end
+$var wire 32 ? RD2 [31:0] $end
+$var wire 32 @ RD1 [31:0] $end
+$var wire 32 A PCTarget [31:0] $end
+$var wire 32 B PCPlus4 [31:0] $end
+$var wire 32 C PC [31:0] $end
+$var wire 32 D MemRD [31:0] $end
+$var wire 32 E Instr [31:0] $end
+$var wire 32 F ImmExt [31:0] $end
+$var wire 32 G ALUInB [31:0] $end
+$var reg 32 H pc_reg [31:0] $end
+$var reg 32 I wb_reg [31:0] $end
+$scope module ALU_u $end
+$var wire 3 J ALUControl [2:0] $end
+$var wire 32 K B [31:0] $end
+$var wire 1 > Zero $end
+$var wire 32 L A [31:0] $end
+$var reg 32 M ALUResult [31:0] $end
+$upscope $end
+$scope module DM $end
+$var wire 1 ' MemWrite $end
+$var wire 32 N addr [31:0] $end
+$var wire 1 . clk $end
+$var wire 32 O WriteData [31:0] $end
+$var reg 32 P ReadData [31:0] $end
+$upscope $end
+$scope module IG $end
+$var wire 3 Q ImmSrc [2:0] $end
+$var wire 32 R instr [31:0] $end
+$var reg 32 S ImmExt [31:0] $end
+$upscope $end
+$scope module IM $end
+$var wire 32 T addr [31:0] $end
+$var reg 32 U instr [31:0] $end
+$upscope $end
+$scope module RF $end
+$var wire 1 ! RegWrite $end
+$var wire 32 V WriteData [31:0] $end
+$var wire 1 . clk $end
+$var wire 5 W rd [4:0] $end
+$var wire 5 X rs1 [4:0] $end
+$var wire 5 Y rs2 [4:0] $end
+$var wire 32 Z ReadData2 [31:0] $end
+$var wire 32 [ ReadData1 [31:0] $end
+$var integer 32 \ i [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b100000 \
+b0 [
+b0 Z
+b0 Y
+b0 X
+b1 W
+b1000000000000 V
+b1000010110111 U
+b0 T
+b1000000000000 S
+b1000010110111 R
+b100 Q
+bx P
+b0 O
+b1000000000000 N
+b1000000000000 M
+b0 L
+b1000000000000 K
+b0 J
+b1000000000000 I
+b0 H
+b1000000000000 G
+b1000000000000 F
+b1000010110111 E
+bx D
+b0 C
+b100 B
+b1000000000000 A
+b0 @
+b0 ?
+0>
+b1000000000000 =
+b1 <
+b110111 ;
+b1000000000000 :
+b11 9
+b100 8
+b0 7
+b0 6
+b11 5
+b100 4
+b0 3
+b0 2
+b1 1
+b110111 0
+1/
+0.
+b0 -
+b0 ,
+1+
+0*
+b100 )
+0(
+0'
+b11 &
+b1000000000000 %
+b1 $
+0#
+b110111 "
+1!
+$end
+#5000
+1.
+#10000
+0.
+0/
+#15000
+1>
+b0 %
+b0 =
+b0 M
+b0 N
+b0 &
+b0 5
+b0 9
+0+
+b0 )
+b0 4
+b0 8
+b0 Q
+0!
+b0 G
+b0 K
+b0 :
+b0 V
+b0 I
+b0 $
+b0 1
+b0 <
+b0 "
+b0 0
+b0 ;
+b0 W
+b0 F
+b0 S
+b0 E
+b0 R
+b0 U
+b1000 B
+b100 A
+b100 C
+b100 H
+b100 T
+1.
+#20000
+0.
+#25000
+b1100 B
+b1000 A
+b1000 C
+b1000 H
+b1000 T
+1.
+#30000
+0.
+#35000
+b10000 B
+b1100 A
+b1100 C
+b1100 H
+b1100 T
+1.
+#40000
+0.
+#45000
+b10100 B
+b10000 A
+b10000 C
+b10000 H
+b10000 T
+1.
+#50000
+0.
+#55000
+b11000 B
+b10100 A
+b10100 C
+b10100 H
+b10100 T
+1.
+#60000
+0.
+#65000
+b11100 B
+b11000 A
+b11000 C
+b11000 H
+b11000 T
+1.
+#70000
+0.
+#75000
+b100000 B
+b11100 A
+b11100 C
+b11100 H
+b11100 T
+1.
+#80000
+0.
+#85000
+b100100 B
+b100000 A
+b100000 C
+b100000 H
+b100000 T
+1.
+#90000
+0.
+#95000
+b101000 B
+b100100 A
+b100100 C
+b100100 H
+b100100 T
+1.
+#100000
+0.
